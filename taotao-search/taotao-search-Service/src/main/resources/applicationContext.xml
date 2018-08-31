@@ -52,7 +52,11 @@
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="basePackage" value="com.taotao.mapper" />
 	</bean>
-	
-	
+
+	<!-- 导入solrJ -->
+	<bean id="httpSolrServer" class="org.apache.solr.client.solrj.impl.HttpSolrServer">
+		<constructor-arg name="baseURL" value="http://192.168.25.154:8080/solr"/>
+	</bean>
+
 	<!-- 这里边只查solr索引，不查数据库 -->
 </beans>

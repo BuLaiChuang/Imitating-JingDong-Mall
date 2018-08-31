@@ -11,5 +11,5 @@ public interface SearchService {
 	 * @param rows 每页显示的条数
 	 * @return SearchResult
 	 */
-	public SearchResult search(String querystring, int page,int rows);
+	public SearchResult search(String querystring, int page, int rows);
 }
