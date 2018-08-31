@@ -46,6 +46,10 @@ public class ContentServiceImpl implements ContentService {
 		tbContent.setCreated(date);
 		tbContent.setUpdated(date);
 		tbContentMapper.addTbContent(tbContent);
+		//缓存同步yiju
+		jedisCliect.hdel(CONTENT_KEY, tbContent.getCategoryId()+"");
+
+
 		return TaotaoResult.ok();
 	}
 
