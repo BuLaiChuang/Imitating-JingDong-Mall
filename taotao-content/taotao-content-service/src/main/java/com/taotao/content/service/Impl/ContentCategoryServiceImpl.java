@@ -19,7 +19,7 @@ public class ContentCategoryServiceImpl implements ContentCategoryService {
 
 	@Autowired
 	private TbContentCategoryMapper contentCategoryMapper;
-	
+
 	@Override
 	public List<EasyUITreeNode> getContentCategoryList(long parentId) {
 		List<TbContentCategory> contentCategorylist = contentCategoryMapper.getTbContentCategoryByParentId(parentId);
